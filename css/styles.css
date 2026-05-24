@@ -270,11 +270,13 @@
   .btn-pdf:hover { border-color:var(--accent); background:var(--accent); color:#fff; }
   .btn-pdf svg { width:14px; height:14px; }
   .btn-pdf.loading { opacity:.6; pointer-events:none; }
+  .btn-insta { display:inline-flex; align-items:center; gap:8px; font-size:.75rem; letter-spacing:.12em; text-transform:uppercase; color:var(--ink); border:1px solid rgba(100,100,100,.3); padding:13px 26px; border-radius:2px; cursor:pointer; background:transparent; transition:border-color var(--tf), background var(--tf), color var(--tf); font-family:var(--sans); text-decoration:none; }
+  .btn-insta:hover { border-color:var(--ink); background:var(--ink); color:var(--paper); }
 
   @media(max-width:600px){
     .l1__info-grid { grid-template-columns:1fr; }
     .l1__actions { flex-direction:column; align-items:stretch; }
-    .l1__actions button { justify-content:center; }
+    .l1__actions button, .l1__actions a { justify-content:center; }
   }
 
   /* ════════════════════════════════════════
