@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Artisera — Fine Art Exhibitions. Current and upcoming shows from the most vital voices in contemporary art.">
+  <title>Artisera — Fine Art Exhibitions</title>
+
+  <!-- ── Fonts ── -->
+  <link rel="dns-prefetch" href="https://script.google.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- ── Styles ── -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!--
+    ┌─────────────────────────────────────────────────────────┐
+    │  CONFIGURATION                                          │
+    │  config.js MUST load first — all other scripts depend  │
+    │  on window.ARTISERA_CONFIG being set.                   │
+    │                                                         │
+    │  Copy config.example.js → config.js                    │
+    │  and fill in your Google Sheets API URL.                │
+    └─────────────────────────────────────────────────────────┘
+  -->
+  <script src="config.js"></script>
+</head>
+
+<body>
+
+  <!-- App root — all DOM is injected by main.js after data loads -->
+  <div id="app"></div>
+
+  <!--
+    ┌─────────────────────────────────────────────────────────┐
+    │  SCRIPT LOAD ORDER — do not reorder                     │
+    │                                                         │
+    │  1. jsPDF     CDN library for PDF generation            │
+    │  2. render.js Pure DOM builders                         │
+    │  3. pdf.js    PDF generation logic                      │
+    │  4. ui.js     All interactions & event listeners        │
+    │  5. main.js   Entry point — fetches data, boots site    │
+    └─────────────────────────────────────────────────────────┘
+  -->
+
+  <!-- jsPDF loaded lazily in pdf.js when first needed -->
+
+  <!-- Application modules -->
+  <script src="js/render.js"></script>
+  <script src="js/pdf.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
